@@ -343,4 +343,113 @@ function method20(n){
     console.log(text);
 
 }
-method20(4);
+method20(3);
+
+//Slide 97
+function method21(n){
+    console.log("EXE21");
+    let text = "";
+        row = n-1;
+        step = (n * 2)-1;
+    for(let line=0; line <=row; line++){
+        for(let i=1; i<=step; i++){
+            if(i >=n-line && i <= n+line){
+                text +="*";
+                //console.log(line)
+            }else{
+                text +="-";
+            }
+        }
+        text +="\n";
+    }
+    
+    console.log(text);
+
+}
+method21(2);
+
+//Slide 98
+function method22(n){
+    console.log("EXE22");
+    let text = "";
+        row = n-1;
+        step = (n * 2)-1;
+    for(let line = row; line >=0; line--){
+        for(let i = step; i >=1; i--){
+            if(i >=n-line && i <= n+line){
+                text +="*";
+            }else{
+                text +="-";
+            }
+        }
+        text +="\n";
+    }
+    
+    console.log(text);
+
+}
+method22(3);
+
+//Slide 99
+function method23(n){
+    console.log("EXE23");
+    let text = "";
+        row = n-1;
+        step = (n * 2)-1;
+    for(let line=0; line <=row; line++){
+        for(let i=1; i<=step; i++){
+            if(i >=n-line && i <= n+line){
+                text +="*";
+                //console.log(line)
+            }else{
+                text +="-";
+            }
+        }
+        text +="\n";
+    } 
+    for(let line = row-1; line >=0; line--){
+        for(let i = step; i >=1; i--){
+            if(i >=n-line && i <= n+line){
+                text +="*";
+            }else{
+                text +="-";
+            }
+        }
+        text +="\n";
+    }
+    
+    console.log(text);
+
+}
+method23(2);
+
+//Slide 100
+function method24(n){
+    console.log("EXE24");
+    let text = "";
+        row = (n * 2)-1;
+        numInRow=1;
+    for (let i = 1; i <= row; i++) {
+        for (let j = 1; j <= row; j++) {
+            if(i <=n){
+                if(j > n-i && j < n+i){
+                    text += numInRow;
+                    numInRow++;
+                }else{
+                    text +="-";
+                }
+            }else{
+                //console.log(i);
+                if(j <= i-n || j >= row -(i-n)+1){
+                    text += "-";                    
+                }else{
+                    text +=numInRow;
+                    numInRow++;
+                }
+            }
+        }
+        text +="\n";
+    }
+    console.log(text);
+}
+method24(4);
